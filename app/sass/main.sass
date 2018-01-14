@@ -1,0 +1,180 @@
+@import "vars"
+@import "libs"
+
+html
+	font-size: 100%
+
+body
+	min-width: 320px
+	font-family: "Roboto", Helvetica, Arial, sans-serif
+	font-size: 0.875rem
+	font-weight: 300
+	color: $default-color
+	line-height: 1.375
+
+.img-responsive
+	max-width: 100% !important
+	height:auto
+	display:block
+
+.main-head
+	padding-top: 1.5rem
+
+a
+	color: $blue
+	border-bottom: 1px solid $blue
+	outline: none !important
+	&:hover, &:active, &:focus
+		color: $red
+		border-color: $red
+		text-decoration: none
+button
+	outline: none !important
+.logo
+	padding-right: 0.625rem
+	p
+		color: $red
+		font-size: 1rem
+		font-style: italic
+		text-align: center
+		margin-top: 1.2rem
+
+.first-head-row
+	display: flex
+	justify-content: space-between
+	margin-bottom: 1.3rem
+
+ul.head-menu
+	list-style-type: none
+	display: flex
+	justify-content: space-between
+	padding: 0
+	margin: 0
+	li
+		display: block
+		&:last-child
+			a
+			border-right: none
+		a
+			background-color: $blue
+			display: block
+			padding: 25px 30px
+			color: #fff
+			text-align: center
+			height: 100%
+			font-weight: 500
+			text-transform: uppercase
+			border-right: 1px solid $grey
+			border-bottom: none
+			transition: background-color $trans
+			&:hover, &:active
+				background-color: $orange
+
+.choice-city
+	.open > 
+		.dropdown-toggle.btn-default
+			&:focus,
+			&:hover,
+			&:active
+				border: none
+				color: lighten($blue, 10%)
+				background-color: #fff
+	.fa-map-marker
+		font-size: 1.3rem
+		color: $red
+		position: relative
+		top: 2px
+	.dropdown-toggle
+		border: none
+		color: lighten($blue, 10%)
+		font-size: 1.125rem
+		padding: 0 0 0 10px
+		&:hover
+			border: none
+			color: lighten($blue, 10%)
+			background-color: #fff
+	.title-dropdown
+		border-bottom: 1px dotted lighten($blue, 10%)
+	.dropdown-menu
+		border-radius: 0
+		border: none
+		margin-top: 5px
+		>li 
+			>a
+				padding: 6px 20px
+				border: none
+				color: lighten($blue, 10%)
+				&:hover
+					color: $red
+					background-color: #fff
+
+.phone-list
+	ul
+		list-style-type: none
+		padding: 0
+		margin-top: 0
+		li
+			font-size: 1.2rem
+			color: $blue
+			span
+				color: #767676
+
+.phone-call,
+.login
+	a
+		border: none
+		&:hover
+			span
+				border-color: $red
+	.fa
+		font-size: 1.3rem
+		color: #fff
+		padding: 8px 10px
+		background-color: $blue
+		border-radius: 50%
+		display: inline-block
+		position: relative
+		top: 2px
+		margin-right: 5px
+	span
+		border-bottom: 1px solid $blue
+
+.slider
+	.slide-img
+		width: 100%
+		padding-top: 35%
+		background-position: center center
+		background-repeat: no-repeat
+		-webkit-background-size: cover
+		background-size: cover
+	.owl-dots
+		text-align: center
+		position: absolute
+		bottom: 3rem
+		right: 0
+		left: 0
+		.owl-dot
+			display: inline-block
+			padding: 0 0.40625rem
+			&.active
+				span
+					background-color: $grey
+			span
+				display: block
+				width: 1.5rem
+				height: 1.5rem
+				background-color: transparent
+				border: 2px solid #fff
+				border-radius: 50%
+				transition: background-color .25s ease-out
+
+.navbar
+	ul.navbar-nav
+		display: flex
+		justify-content: space-between
+		float: none
+		li
+			a
+				padding: 0
+
+@import "media"
