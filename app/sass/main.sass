@@ -24,6 +24,7 @@ a
 	color: $blue
 	border-bottom: 1px solid $blue
 	outline: none !important
+	transition: color $trans, border-color $trans
 	&:hover, &:active, &:focus
 		color: $red
 		border-color: $red
@@ -169,12 +170,179 @@ ul.head-menu
 				transition: background-color .25s ease-out
 
 .navbar
+	min-height: auto
+	background-color: transparent
+	border: none
+	margin: 30px 0
 	ul.navbar-nav
 		display: flex
 		justify-content: space-between
 		float: none
-		li
-			a
+		>li
+			>a
 				padding: 0
+				font-size: 1rem
+				color: lighten($blue, 10%)
+				border-color: lighten($blue, 10%)
+				text-transform: uppercase
+				&:hover, &:active
+					color: $red
+					border-color: $red
+
+.grid
+	>.container
+		>.row
+			margin-right: -5px
+			margin-left: -5px
+	&-item
+		display: block
+		height: 125px
+		margin-bottom: 10px
+		border: none
+		.col-xs-6
+			padding: 0 5px 0 5px
+		&-right,
+		&-left
+			overflow: hidden
+		&:hover
+			.grid-item-icon
+				background-color: $light-orange
+			.grid-item-title
+				background-color: $orange
+			.grid-item-img
+				transform: scale(1.1)
+		&-img
+			width: 100%
+			height: 125px
+			background-position: center center
+			background-repeat: no-repeat
+			background-size: cover
+			overflow: hidden
+			transition: transform 1s ease-out
+		&-icon,
+		&-title
+			width: 50%
+			height: 125px
+			color: #fff
+			text-align: center
+			margin: auto
+			padding: 10px
+			float: left
+			transition: background-color $trans
+		&-icon
+			background-color: $light-blue
+			.fa
+				font-size: 72px
+				position: relative
+				top: 50%
+				transform: translateY(-50%)
+		&-title
+			background-color: $blue
+			font-size: 0.9375rem
+			text-transform: uppercase
+			font-weight: 500
+			span
+				display: inline-block
+				position: relative
+				top: 50%
+				transform: translateY(-50%)
+
+.news
+	&-title
+		background-color: #ffd79d
+		padding: 10px 20px
+		text-transform: uppercase
+		color: #002a6a
+		font-size: 1.2rem
+		font-weight: 500
+		margin: 15px 0 25px 0
+	&-item
+		padding: 15px 10px
+		background-color: #e2f5ff
+		margin-bottom: 15px
+	&-date
+		color: $blue
+		font-weight: 500
+		display: block
+		padding-bottom: 7px
+	&-preview
+		border-top: 1px solid #0093dd
+		padding-top: 7px
+	&-full
+		display: block
+		text-align: right
+		border: none
+		.fa
+			position: relative
+			top: 1px
+			margin-left: 3px
+
+.home-article
+	margin-top: 20px
+	&-title
+		text-transform: uppercase
+		color: #002a6a
+		font-size: 1.2rem
+	&-img
+		background-position: center center
+		background-repeat: no-repeat
+		height: 170px
+
+.wrap-slider-partners
+	margin: 50px 0
+
+.slider-partners
+	.slide-pa
+		margin: 0 50px
+		img
+			max-height: 60px
+	.owl-nav
+		position: absolute
+		width: 100%
+		top: 0
+		&::after,
+		&::before
+			content: ''
+			display: table
+			clear: both
+		transform: translateY(-50%)
+		.owl-next,
+		.owl-prev
+			position: absolute
+			font-size: 32px
+			color: #868686
+			transition: color $trans
+			&:hover
+				color: $orange
+		.owl-prev
+			left: 15px
+		.owl-next
+			right: 15px
+
+.main-footer
+	background-color: $blue
+	padding: 10px 0 30px 0
+
+.main-footer
+	color: #fff
+	.foot-title
+		text-transform: uppercase
+		margin: 30px 0 20px 0
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0
+		li
+			padding: 2px 0
+		a
+			color: #fff
+			border-color: #fff
+			&:hover
+				color: $light-orange
+				border-color: $light-orange
+.foot-copy
+	margin-top: 50px
+	text-align: center
+	font-weight: 500
 
 @import "media"

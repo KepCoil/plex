@@ -49,7 +49,8 @@ gulp.task('js', ['common-js'], function() {
 	return gulp.src([
 		'app/libs/jquery/jquery-3.2.1.min.js',
 		'app/libs/bootstrap/js/bootstrap.min.js',
-		'app/libs/owl-carousel/owl.carousel.min.js'
+		'app/libs/owl-carousel/owl.carousel.min.js',
+		'app/libs/equal-heights/jquery.equalheights.min.js'
 		])
 	.pipe(concat('libs.min.js'))
 	// .pipe(uglify()) // Минимизировать весь js (на выбор)
