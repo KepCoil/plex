@@ -43,7 +43,7 @@ button
 .first-head-row
 	display: flex
 	justify-content: space-between
-	margin-bottom: 1.3rem
+	margin-bottom: 32px
 
 ul.head-menu
 	list-style-type: none
@@ -70,6 +70,10 @@ ul.head-menu
 			transition: background-color $trans
 			&:hover, &:active
 				background-color: $orange
+			span
+				position: relative
+				top: 50%
+				transform: translateY(-50%)
 
 .choice-city
 	.open > 
@@ -290,16 +294,23 @@ ul.head-menu
 
 .wrap-slider-partners
 	margin: 50px 0
+	.slider-pa-title
+		text-transform: uppercase
+		color: #002a6a
+		font-size: 1.2rem
+		margin-bottom: 30px
 
 .slider-partners
 	.slide-pa
-		margin: 0 50px
+		margin: 0 40px
 		img
+			width: auto
 			max-height: 60px
+			margin: 0 auto
 	.owl-nav
 		position: absolute
 		width: 100%
-		top: 0
+		top: 5%
 		&::after,
 		&::before
 			content: ''

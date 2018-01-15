@@ -15,10 +15,10 @@ $(function(){
 	      0:{
 	         items:1,
 	      },
-	      480:{
+	      768:{
 	         items:2
 	      },
-	      768:{
+	      992:{
 	         items:3
 	      },
 	      1200:{
@@ -29,7 +29,15 @@ $(function(){
 	
 	function eqH() {
 		$(".js-news-preview-eqh").height('auto').equalHeights();
-		$(".foot-cont >ul").height('auto').equalHeights();
+		// $(".foot-cont >ul").height('auto').equalHeights();
+
+		var windowWidth = $(window).width();
+		
+		if (windowWidth >= 768) {
+			$(".foot-cont >ul").height('auto').equalHeights();
+		} else {
+			$("..foot-cont >ul").height('auto');
+		}
 	};
 	eqH();
 
