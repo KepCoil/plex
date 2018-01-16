@@ -4,12 +4,25 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	/* Large Devices, Wide Screens */
+	.slider 
+		.slide-text
+			max-width: 60%
 
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px)
-	/* Large Devices, Wide Screens */
+@media only screen and (max-width : 992px) and (min-width : 768px)
+	html
+		font-size: 85%
+	.first-head-row
+		margin-bottom: 25px
+	.slider 
+		.slide-text
+			max-width: 70%
+			padding: 20px
+	ul.head-menu 
+		li 
+			a
+				padding: 15px
 
 
 
@@ -31,6 +44,14 @@
 			text-align: center
 	ul.head-menu
 		display: block
+		li
+			a
+				border-right: 0
+				border-bottom: 1px solid #bebebe
+				span
+					position: static
+					top: 0
+					transform: none
 	.slider
 		display: none
 	.navbar
@@ -40,10 +61,11 @@
 			width: 100%
 			border: none
 			background-color: $orange
-			padding: 10px 15px
+			padding: 15px
 			color: #fff
 			text-transform: uppercase
-			font-weight: 500
+			font-weight: 700
+			font-size: 1.125rem
 		.mobile-menu-title
 			text-transform: uppercase
 			font-weight: 700

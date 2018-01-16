@@ -12,18 +12,10 @@ body
 	color: $default-color
 	line-height: 1.375
 
-.img-responsive
-	max-width: 100% !important
-	height:auto
-	display:block
-
-.main-head
-	padding-top: 1.5rem
-
 a
+	outline: none !important
 	color: $blue
 	border-bottom: 1px solid $blue
-	outline: none !important
 	transition: color $trans, border-color $trans
 	&:hover, &:active, &:focus
 		color: $red
@@ -31,6 +23,54 @@ a
 		text-decoration: none
 button
 	outline: none !important
+
+h1
+	font-size: 1.5rem
+	text-transform: uppercase
+	color: #002a6a
+	font-weight: 700
+	margin: 20px 0 30px 0
+
+h2, .h2-title
+	font-size: 1.2rem
+	text-transform: uppercase
+	color: #002a6a
+	font-weight: 500
+	margin: 15px 0 25px 0
+
+h3
+	font-size: 1.2rem
+	text-transform: uppercase
+	color: #002a6a
+	font-weight: 500
+	margin: 10px 0 20px 0
+
+h4
+	font-size: 1.1rem
+	font-weight: 500
+	margin: 10px 0 20px 0
+
+h4
+	font-size: 1.1rem
+	font-weight: 500
+	margin: 10px 0 20px 0
+
+h5, h6
+	font-size: 1rem
+	font-weight: 500
+	margin: 10px 0 20px 0
+
+.img-responsive
+	max-width: 100% !important
+	height:auto
+	display:block	
+
+.main-head
+	padding-top: 1.5rem
+
+.home-sect
+	margin-bottom: 20px
+
 .logo
 	padding-right: 0.625rem
 	p
@@ -74,6 +114,7 @@ ul.head-menu
 				position: relative
 				top: 50%
 				transform: translateY(-50%)
+				display: inline-block
 
 .choice-city
 	.open > 
@@ -152,10 +193,30 @@ ul.head-menu
 		background-repeat: no-repeat
 		-webkit-background-size: cover
 		background-size: cover
+	.slide-text
+		position: absolute
+		top: 0
+		padding: 30px
+		margin-top: 5%
+		background-color: rgba(239, 138, 0, 0.6)
+		max-width: 40%
+		color: #fff
+		border-radius: 2px
+		line-height: 1.4
+		h2
+			font-size: 1.625rem
+			color: #fff
+			text-transform: uppercase
+			text-shadow: 1px 3px 3px rgba(0, 0, 0, 0.3)
+			line-height: 1.3
+		p
+			font-size: 1.2rem
+			text-shadow: 1px 3px 3px rgba(0, 0, 0, 0.3)
+
 	.owl-dots
 		text-align: center
 		position: absolute
-		bottom: 3rem
+		bottom: 2rem
 		right: 0
 		left: 0
 		.owl-dot
@@ -194,6 +255,7 @@ ul.head-menu
 					border-color: $red
 
 .grid
+	margin-bottom: 15px
 	>.container
 		>.row
 			margin-right: -5px
@@ -253,8 +315,6 @@ ul.head-menu
 
 .news
 	&-title
-		background-color: #ffd79d
-		padding: 10px 20px
 		text-transform: uppercase
 		color: #002a6a
 		font-size: 1.2rem
@@ -282,11 +342,11 @@ ul.head-menu
 			margin-left: 3px
 
 .home-article
-	margin-top: 20px
-	&-title
+	.h2-home-article
 		text-transform: uppercase
 		color: #002a6a
 		font-size: 1.2rem
+		margin-top: 0
 	&-img
 		background-position: center center
 		background-repeat: no-repeat
@@ -301,6 +361,8 @@ ul.head-menu
 		margin-bottom: 30px
 
 .slider-partners
+	.slide
+		position: relative
 	.slide-pa
 		margin: 0 40px
 		img
@@ -351,9 +413,12 @@ ul.head-menu
 			&:hover
 				color: $light-orange
 				border-color: $light-orange
+
 .foot-copy
 	margin-top: 50px
 	text-align: center
 	font-weight: 500
+
+
 
 @import "media"
