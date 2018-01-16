@@ -28,16 +28,17 @@ $(function(){
 	});
 	
 	function eqH() {
-		$(".js-news-preview-eqh").height('auto').equalHeights();
-		// $(".foot-cont >ul").height('auto').equalHeights();
-
-		var windowWidth = $(window).width();
 		
+		var windowWidth = $(window).width();
 		if (windowWidth >= 768) {
+			$(".js-news-preview-eqh").height('auto').equalHeights();
 			$(".foot-cont >ul").height('auto').equalHeights();
+
 		} else {
-			$("..foot-cont >ul").height('auto');
-		}
+			$(".js-news-preview-eqh").height('auto');
+			$(".foot-cont >ul").height('auto');
+		};
+
 	};
 	eqH();
 

@@ -11,6 +11,7 @@ body
 	font-weight: 300
 	color: $default-color
 	line-height: 1.375
+	position: relative
 
 a
 	outline: none !important
@@ -21,8 +22,10 @@ a
 		color: $red
 		border-color: $red
 		text-decoration: none
+
 button
 	outline: none !important
+	transition: color $trans, border-color $trans
 
 h1
 	font-size: 1.5rem
@@ -38,15 +41,13 @@ h2, .h2-title
 	font-weight: 500
 	margin: 15px 0 25px 0
 
+h2.h2-article-title
+	margin-top: 0
+
 h3
 	font-size: 1.2rem
 	text-transform: uppercase
 	color: #002a6a
-	font-weight: 500
-	margin: 10px 0 20px 0
-
-h4
-	font-size: 1.1rem
 	font-weight: 500
 	margin: 10px 0 20px 0
 
@@ -186,6 +187,7 @@ ul.head-menu
 		border-bottom: 1px solid $blue
 
 .slider
+	margin-bottom: 50px
 	.slide-img
 		width: 100%
 		padding-top: 35%
@@ -395,8 +397,6 @@ ul.head-menu
 .main-footer
 	background-color: $blue
 	padding: 10px 0 30px 0
-
-.main-footer
 	color: #fff
 	.foot-title
 		text-transform: uppercase
@@ -413,12 +413,59 @@ ul.head-menu
 			&:hover
 				color: $light-orange
 				border-color: $light-orange
+	.foot-copy
+		margin-top: 50px
+		text-align: center
+		font-weight: 500
 
-.foot-copy
-	margin-top: 50px
-	text-align: center
-	font-weight: 500
+/* ВНТР. СТРАНИЦЫ */
+.page-content
+	&-block
+		margin-bottom:: 30px
+	&-title
+		background-color: $orange
+		padding: 12px 20px
+		color: #fff
+	
 
+.content-column-wrap
+	margin-bottom: 30px
+	h3
+		text-transform: none
+	ul, ol
+		padding-left: 20px
+
+.sidebar
+	&-block
+		padding: 30px 20px
+		border-radius: 2px
+		margin-bottom: 30px
+		&-grey
+			background-color: #f2f2f2
+			border: 1px solid darken(#f2f2f2, 10%)
+		&-blue
+			background-color: #e2f5ff
+			border: 1px solid darken(#e2f5ff, 10%)
+		&-title
+			margin-top: 0
+			color: #3e3e3e
+			font-size: 1rem
+			font-weight: 700
+
+.main-form
+	color: #5a5a5a
+	font-size: 0.8rem
+	.button-form-wrap
+		text-align: center
+		margin-top: 20px
+		.btn-form
+			color: #fff
+			padding: 8px 30px
+			border: none
+			&-blue
+				background-color: $blue
+			&-orange
+				background-color: $orange
 
 
 @import "media"
