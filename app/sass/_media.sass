@@ -10,7 +10,7 @@
 
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px) and (min-width : 768px)
+@media only screen and (max-width : 992px) and (min-width : 767px)
 	html
 		font-size: 85%
 	.first-head-row
@@ -27,12 +27,14 @@
 
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px)
+@media only screen and (max-width : 767px)
 	.logo
 		margin-bottom: 40px
 		padding: 0
 		img
 			margin: 0 auto
+		p
+			display: none
 	.first-head-row
 		display: block
 		>div
@@ -79,7 +81,15 @@
 					border: none
 					padding: 10px 0
 					text-align: center
+	// .main-footer
+	// 	.foot-cont
+	// 		text-align: center
 
+
+@media only screen and (max-width : 767px) and (min-width : 576px)
+	.logo
+		img
+			max-width: 60%
 
 
 /* Extra Small Devices, Phones */

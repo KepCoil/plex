@@ -5638,7 +5638,7 @@ h5, h6 {
   margin: 10px 0 20px 0; }
 
 .img-responsive {
-  max-width: 100% !important; }
+  max-width: 100%; }
 
 .main-head {
   padding-top: 1.5rem; }
@@ -5761,6 +5761,9 @@ ul.head-menu {
     -webkit-transition: background-color 0.25s ease-out;
     -o-transition: background-color 0.25s ease-out;
     transition: background-color 0.25s ease-out; }
+  .phone-call a span,
+  .login a span {
+    border-bottom: 1px dotted #004088; }
   .phone-call a:hover .fa,
   .login a:hover .fa {
     background-color: #dc0000; }
@@ -5990,7 +5993,10 @@ ul.head-menu {
     max-height: 60px;
     margin: 0 auto;
     -webkit-filter: grayscale(100%);
-            filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
     opacity: 0.5;
     -webkit-transition: opacity 0.25s ease-out, -webkit-filter 0.25s ease-out;
     transition: opacity 0.25s ease-out, -webkit-filter 0.25s ease-out;
@@ -5999,7 +6005,10 @@ ul.head-menu {
     transition: filter 0.25s ease-out, opacity 0.25s ease-out, -webkit-filter 0.25s ease-out; }
     .slider-partners .slide-pa img:hover {
       -webkit-filter: grayscale(0);
-              filter: grayscale(0);
+      -moz-filter: grayscale(0);
+      -ms-filter: grayscale(0);
+      -o-filter: grayscale(0);
+      filter: grayscale(0);
       opacity: 1; }
 
 .slider-partners .owl-nav {
@@ -6108,7 +6117,7 @@ ul.head-menu {
     max-width: 60%; } }
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width: 992px) and (min-width: 768px) {
+@media only screen and (max-width: 992px) and (min-width: 767px) {
   html {
     font-size: 85%; }
   .first-head-row {
@@ -6120,12 +6129,14 @@ ul.head-menu {
     padding: 15px; } }
 
 /* Small Devices, Tablets */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .logo {
     margin-bottom: 40px;
     padding: 0; }
     .logo img {
       margin: 0 auto; }
+    .logo p {
+      display: none; }
   .first-head-row {
     display: block; }
     .first-head-row > div {
@@ -6170,6 +6181,10 @@ ul.head-menu {
       border: none;
       padding: 10px 0;
       text-align: center; } }
+
+@media only screen and (max-width: 767px) and (min-width: 576px) {
+  .logo img {
+    max-width: 60%; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 576px) {
