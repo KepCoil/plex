@@ -19,9 +19,10 @@ a
 	border-bottom: 1px solid $blue
 	transition: color $trans, border-color $trans
 	&:hover, &:active, &:focus
+		text-decoration: none
+	&:hover
 		color: $red
 		border-color: $red
-		text-decoration: none
 
 button
 	outline: none !important
@@ -61,10 +62,30 @@ h5, h6
 	font-weight: 500
 	margin: 10px 0 20px 0
 
+input[type="checkbox"], 
+input[type="radio"]
+	margin: 2px 0 0
+	
 .img-responsive
 	max-width: 100%
 	height:auto
 	display:block	
+.btn
+	font-size: inherit
+
+
+.btn-default.active.focus, 
+.btn-default.active:focus, 
+.btn-default.active:hover, 
+.btn-default:active.focus, 
+.btn-default:active:focus, 
+.btn-default:active:hover, 
+.open > .dropdown-toggle.btn-default.focus, 
+.open > .dropdown-toggle.btn-default:focus, 
+.open > .dropdown-toggle.btn-default:hover
+	background-color: transparent
+	border: none
+	box-shadow: none
 
 .main-head
 	padding-top: 1.5rem
@@ -81,10 +102,16 @@ h5, h6
 		text-align: center
 		margin-top: 1.2rem
 
-.first-head-row
-	display: flex
-	justify-content: space-between
-	margin-bottom: 35px
+.wrap-head-content
+	position: relative
+	height: 100%
+	.first-head-row
+		display: flex
+		justify-content: space-between
+		margin-bottom: 15px
+	.second-head-row
+		position: absolute
+		bottom: 0
 
 ul.head-menu
 	list-style-type: none
@@ -168,12 +195,22 @@ ul.head-menu
 
 .phone-call,
 .login
-	a
+	.phone-call-titile,
+	.login-title
+		border-bottom: 1px dashed $blue
+		color: $blue
+	a, 
+	button
 		border: none
+		padding: 0
+		&:hover, &:focus, &:active
+			background-color: transparent
+			border: none
+		&:hover
+			span
+				color: $red
 		.fa
 			transition: background-color $trans
-		span
-			border-bottom: 1px dotted $blue
 		&:hover
 			.fa
 				background-color: $red
@@ -191,6 +228,28 @@ ul.head-menu
 		margin-right: 5px
 	span
 		border-bottom: 1px solid $blue
+
+.login
+	.dropdown-menu
+		left: auto
+		right: 0
+		min-width: 240px
+		padding: 15px 12px
+		border-radius: 0
+		box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175)
+		margin-top: 10px
+		border: none
+	.open
+		.dropdown-toggle
+			background-color: transparent
+			&:hover, &:focus
+				background-color: transparent
+			.login-title
+				border-color: $red
+				color: $red
+			.fa
+				background-color: $red
+
 
 .slider
 	margin-bottom: 50px
@@ -475,6 +534,9 @@ ul.head-menu
 .main-form
 	color: #5a5a5a
 	font-size: 0.8rem
+	label
+		font-weight: 500
+		color: $blue
 	.button-form-wrap
 		text-align: center
 		margin-top: 20px
@@ -486,6 +548,63 @@ ul.head-menu
 				background-color: $blue
 			&-orange
 				background-color: $orange
+	&-full
+		margin-bottom: 30px
+		.button-form-wrap
+			.btn-form
+				padding: 12px 40px
+				font-size: 1rem
 
+
+.callback-title
+	text-align: center
+
+.wrap-callback-form
+	position: relative
+	max-width: 500px
+	min-width: 290px
+	background: #fff
+	padding: 20px
+	margin: 20px auto
+
+.mfp-container
+	padding: 0 15px
+
+.my-mfp-zoom-in
+	.zoom-anim-dialog
+		opacity: 0
+		-webkit-transition: all 0.2s ease-in-out
+		-moz-transition: all 0.2s ease-in-out
+		-o-transition: all 0.2s ease-in-out
+		transition: all 0.2s ease-in-out
+		-webkit-transform: scale(0.8)
+		-moz-transform: scale(0.8)
+		-ms-transform: scale(0.8)
+		-o-transform: scale(0.8)
+		transform: scale(0.8)
+	&.mfp-ready .zoom-anim-dialog
+		opacity: 1
+		-webkit-transform: scale(1)
+		-moz-transform: scale(1)
+		-ms-transform: scale(1)
+		-o-transform: scale(1)
+		transform: scale(1)
+	&.mfp-removing .zoom-anim-dialog
+		-webkit-transform: scale(0.8)
+		-moz-transform: scale(0.8)
+		-ms-transform: scale(0.8)
+		-o-transform: scale(0.8)
+		transform: scale(0.8)
+		opacity: 0
+	&.mfp-bg
+		opacity: 0
+		-webkit-transition: opacity 0.3s ease-out
+		-moz-transition: opacity 0.3s ease-out
+		-o-transition: opacity 0.3s ease-out
+		transition: opacity 0.3s ease-out
+	&.mfp-ready.mfp-bg
+		opacity: 0.8
+	&.mfp-removing.mfp-bg
+		opacity: 0
 
 @import "media"

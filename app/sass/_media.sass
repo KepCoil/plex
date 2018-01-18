@@ -35,15 +35,26 @@
 			margin: 0 auto
 		p
 			display: none
-	.first-head-row
-		display: block
-		>div
-			text-align: center
-			margin-bottom: 20px
+	.wrap-head-content
+		.first-head-row
+			display: block
+			>div
+				text-align: center
+				margin-bottom: 20px
+		.second-head-row
+			position: static
 	.choice-city 
 		.dropdown-menu
 			right: 0
 			text-align: center
+			max-width: 290px
+			margin: 5px auto
+	.login 
+		.dropdown-menu
+			max-width: 290px
+			margin: 15px auto
+			left: 0
+			right: 0
 	ul.head-menu
 		display: block
 		li
@@ -127,10 +138,12 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px)
-	/**/
+	.main-form-full
+		max-width: 60%
 
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
-	/**/
+	.main-form-full
+		max-width: 60%
 
