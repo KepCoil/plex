@@ -5847,6 +5847,21 @@ ul.head-menu {
 .login span {
   border-bottom: 1px solid #004088; }
 
+.logout-btn {
+  background-color: transparent;
+  vertical-align: middle;
+  position: relative;
+  top: 1px; }
+  .logout-btn:hover .fa.fa-sign-out {
+    background-color: transparent;
+    color: #dc0000; }
+  .logout-btn .fa.fa-sign-out {
+    background-color: transparent;
+    color: #004088;
+    padding: 0;
+    margin-right: 0;
+    margin-left: 5px; }
+
 .login .dropdown-menu {
   left: auto;
   right: 0;
